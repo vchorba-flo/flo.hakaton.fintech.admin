@@ -10,6 +10,7 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 import { ShopsComponent } from './shops/shops.component';
 import { UsersComponent } from './users/users.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { AdminCardComponent } from './shared/components/admin-card/admin-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
     SideMenuComponent,
     ShopsComponent,
     UsersComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    AdminCardComponent
   ],
   imports: [
     BrowserModule,
