@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NbMenuItem } from '@nebular/theme';
-import { sideMenuItems } from './side-menu';
+import { sideMenuLoginedItems } from './side-menu';
 
 @Component({
   selector: 'app-side-menu',
@@ -9,7 +9,7 @@ import { sideMenuItems } from './side-menu';
 })
 export class SideMenuComponent implements OnInit {
 
-  items: NbMenuItem[] = sideMenuItems;
+  items: NbMenuItem[] = sideMenuLoginedItems;
 
   constructor() { }
 

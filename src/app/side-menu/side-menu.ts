@@ -1,19 +1,24 @@
 import { NbMenuItem } from '@nebular/theme';
 
-export const sideMenuItems: NbMenuItem[] = [
+export const sideMenuLoginedItems: NbMenuItem[] = [
   {
     title: 'Магазины',
-    icon: '',
+    icon: 'shopping-bag-outline',
     link: 'shops'
   },
   {
     title: 'Пользователи',
-    icon: '',
+    icon: 'person-outline',
     link: 'users'
   },
   {
     title: 'Статистика',
-    icon: '',
+    icon: 'bar-chart-outline',
     link: 'statistics'
+  },
+  {
+    title: 'Выход',
+    icon: 'log-out-outline',
+    link: 'login'
   },
 ]

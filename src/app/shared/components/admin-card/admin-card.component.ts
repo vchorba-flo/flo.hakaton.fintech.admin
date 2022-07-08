@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-admin-card',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-card.component.scss']
 })
 export class AdminCardComponent implements OnInit {
+
+  @Input() name: string = 'admin';
+  @Input() title: string = 'Admin';
 
   constructor() { }
 

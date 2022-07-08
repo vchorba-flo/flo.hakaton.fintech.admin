@@ -1,0 +1,8 @@
+<div class="login-form">
+  <div class="form-text">Login</div>
+  <ng-form class="form" [formGroup]="form">
+    <input nbInput [status]="inputStatus" class="login" placeholder="Login" formControlName="login">
+    <input nbInput [status]="inputStatus" class="password" placeholder="Password" formControlName="password" type="password">
+    <button nbButton status="success" size="small" (click)="login()">Login</button>
+  </ng-form>
+</div>
