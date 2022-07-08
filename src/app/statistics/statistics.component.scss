@@ -1,0 +1,36 @@
+:host {
+  ::ng-deep {
+    nb-card {
+
+      nb-card-body {
+
+        .body-container {
+          display: flex;
+          align-items: center;
+
+          .shop-s{
+            display: flex;
+            justify-content: center;
+            width: 50%;
+          }
+          .bank-profit-s,
+          .purchases-number-s {
+            width: 25%;
+            text-align: center;
+          }
+
+          .shop-s,
+          .bank-profit-s,
+          .purchases-number-s {
+            height: 100%;
+            cursor: pointer;
+
+            &:hover {
+              color: dodgerblue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
