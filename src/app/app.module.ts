@@ -7,11 +7,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbMenuModule, NbCardModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SideMenuComponent } from './side-menu/side-menu.component';
+import { ShopsComponent } from './shops/shops.component';
+import { UsersComponent } from './users/users.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    ShopsComponent,
+    UsersComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
