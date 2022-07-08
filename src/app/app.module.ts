@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +12,7 @@ import {
   NbSidebarModule,
   NbMenuModule,
   NbCardModule,
-  NbUserModule, NbInputModule, NbButtonModule,
+  NbUserModule, NbInputModule, NbButtonModule, NbTabsetModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SideMenuComponent } from './side-menu/side-menu.component';
@@ -20,6 +21,8 @@ import { UsersComponent } from './users/users.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { AdminCardComponent } from './shared/components/admin-card/admin-card.component';
 import { LoginComponent } from './login/login.component';
+import { ShopStatisticsComponent } from './shared/components/shop-statistics/shop-statistics.component';
+import { SortShopStatisticsPipe } from './shared/pipes/sort-shop-statistics.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { LoginComponent } from './login/login.component';
     UsersComponent,
     StatisticsComponent,
     AdminCardComponent,
-    LoginComponent
+    LoginComponent,
+    ShopStatisticsComponent,
+    SortShopStatisticsPipe
   ],
   imports: [
     BrowserModule,
@@ -46,6 +51,8 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     NbButtonModule,
     ReactiveFormsModule,
+    NbTabsetModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
