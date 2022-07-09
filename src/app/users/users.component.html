@@ -1,1 +1,16 @@
-<p>users works!</p>
+<div class="user-container" *ngIf="users$ | async as users">
+  <div class="search">
+    <input nbInput [min]="0" placeholder="Поиск по id" type="number" [(ngModel)]="userId">
+  </div>
+  <div class="card-container" *ngFor="let user of users | filterArrayByValue: userId:'id'">
+    <nb-card class="card">
+      <nb-card-body class="user-card">
+        <div class="id">{{user.id}}</div>
+        <div class="name">{{user.name}}</div>
+        <button class="block-button" nbButton size="small" [status]="user.isBlocked ? 'success' : 'danger'">
+          {{user.isBlocked ? 'Разблокировать' : 'Заблокировать'}}
+        </button>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
