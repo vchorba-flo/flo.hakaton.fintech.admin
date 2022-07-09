@@ -1,3 +1,4 @@
+<app-date-picker (onDateRangeChange)="dateRangeChange($event)"></app-date-picker>
 <div class="general-container" *ngIf="generalStatistics$ | async as generals">
   <div class="general-card" *ngFor="let general of generals">
     <nb-card>

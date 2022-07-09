@@ -64,13 +64,18 @@ export class ApiServiceService {
     //   );
   }
 
-  public getGeneralStatistics(): Observable<GeneralStatistics[]> {
+  public getGeneralStatistics(range?: any): Observable<GeneralStatistics[]> {
     return of([
       { name: 'Прибыль банка', count: 1000 },
-      { name: 'Часто покупаемые товары', count: 1000 },
-      { name: 'Популярный магазин', count: 1000 },
+      { name: 'Частые Категории', count: 1000 },
+      { name: 'Популярные магазин', count: 1000 },
     ])
-    // return this.httpClient.get(`${this.apiUrl}statistics/shop`)
+    // return this.httpClient.get<GeneralStatistics[]>(`${this.apiUrl}statistics/general`, {
+    //   params: {
+    //     rangeStart: range?.start?.getTime(),
+    //     rangeEnd: range?.end?.getTime(),
+    //   }
+    // })
     //   .pipe(
     //     shareReplay(1)
     //   );

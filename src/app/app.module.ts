@@ -12,7 +12,14 @@ import {
   NbSidebarModule,
   NbMenuModule,
   NbCardModule,
-  NbUserModule, NbInputModule, NbButtonModule, NbTabsetModule, NbFormFieldModule, NbIconModule,
+  NbUserModule,
+  NbInputModule,
+  NbButtonModule,
+  NbTabsetModule,
+  NbFormFieldModule,
+  NbIconModule,
+  NbCalendarRangeModule,
+  NbCalendarModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SideMenuComponent } from './side-menu/side-menu.component';
@@ -28,6 +35,7 @@ import { GeneralStatisticsComponent } from './shared/components/general-statisti
 import { FilterArrayByValuePipe } from './shared/pipes/filter-array-by-value.pipe';
 import {ShopCardComponent} from "./shared/components/shop-card/shop-card.component";
 import { ArrowButtonComponent } from './shared/components/arrow-button/arrow-button.component';
+import { DatePickerComponent } from './shared/components/date-picker/date-picker.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +52,8 @@ import { ArrowButtonComponent } from './shared/components/arrow-button/arrow-but
     GeneralStatisticsComponent,
     FilterArrayByValuePipe,
     ShopCardComponent,
-    ArrowButtonComponent
+    ArrowButtonComponent,
+    DatePickerComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +74,8 @@ import { ArrowButtonComponent } from './shared/components/arrow-button/arrow-but
     HttpClientModule,
     NbFormFieldModule,
     NbIconModule,
+    NbCalendarRangeModule,
+    NbCalendarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

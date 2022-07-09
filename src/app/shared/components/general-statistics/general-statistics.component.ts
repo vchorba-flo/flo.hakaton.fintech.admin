@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NbCalendarRange } from '@nebular/theme';
 import { Observable } from 'rxjs';
 import { ApiServiceService, GeneralStatistics } from '../../../core/services/api-service.service';
 
@@ -17,4 +18,10 @@ export class GeneralStatisticsComponent implements OnInit {
     this.generalStatistics$ = this.apiService.getGeneralStatistics();
   }
 
+  public dateRangeChange(range: NbCalendarRange<Date>): void {
+    if (!range.end?.getTime()) {
+      return;
+    }
+    this.generalStatistics$ = this.apiService.getGeneralStatistics(range)
+  }
 }
