@@ -23,6 +23,9 @@ import { AdminCardComponent } from './shared/components/admin-card/admin-card.co
 import { LoginComponent } from './login/login.component';
 import { ShopStatisticsComponent } from './shared/components/shop-statistics/shop-statistics.component';
 import { SortShopStatisticsPipe } from './shared/pipes/sort-shop-statistics.pipe';
+import { CategoryStatisticsComponent } from './shared/components/category-statistics/category-statistics.component';
+import { GeneralStatisticsComponent } from './shared/components/general-statistics/general-statistics.component';
+import { FilterArrayByValuePipe } from './shared/pipes/filter-array-by-value.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { SortShopStatisticsPipe } from './shared/pipes/sort-shop-statistics.pipe
     AdminCardComponent,
     LoginComponent,
     ShopStatisticsComponent,
-    SortShopStatisticsPipe
+    SortShopStatisticsPipe,
+    CategoryStatisticsComponent,
+    GeneralStatisticsComponent,
+    FilterArrayByValuePipe
   ],
   imports: [
     BrowserModule,
