@@ -20,6 +20,17 @@ export interface User {
   isBlocked: boolean;
 }
 
+export interface CashBackTypes {
+  shop: number;
+  bank: number;
+  user: number;
+}
+
+export interface ShopsWithCashBack {
+  shopName: string;
+  cashBack: CashBackTypes;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -112,5 +123,24 @@ export class ApiServiceService {
     //   .pipe(
     //     shareReplay(1)
     //   );
+  }
+
+  public getShopsWithCashBack(): Observable<ShopsWithCashBack[]> {
+     return of([
+      { shopName: 'Магнит', cashBack: {shop:8, bank:5, user:3 } },
+      { shopName: 'Перекресток', cashBack: {shop:4, bank:2, user:2 } },
+      { shopName: 'Три топора', cashBack: {shop:4, bank:2, user:2 } },
+      { shopName: 'Paypal', cashBack: {shop:5, bank:3, user:2 } },
+      { shopName: 'Дисней', cashBack: {shop:4, bank:3, user:1 } },
+      { shopName: 'SpaceX', cashBack: {shop:8, bank:1, user:7 } },
+      { shopName: 'Tesla shop', cashBack: {shop:7, bank:2, user:5 } },
+      { shopName: 'ivi', cashBack: {shop:4, bank:2, user:2 } },
+      { shopName: 'www.123.com', cashBack: {shop:4, bank:2, user:2 } },
+      { shopName: 'плиз купи', cashBack: {shop:25, bank:15, user:5 } },
+      { shopName: 'Steam', cashBack: {shop:30, bank:15, user:15 } },
+      { shopName: 'Пятёрка', cashBack: {shop:5, bank:2, user:3 } },
+      { shopName: 'Макароны', cashBack: {shop:10, bank:3, user:7 } },
+      { shopName: 'Барбер шоп', cashBack: {shop:3, bank:2, user:1 } },
+    ])
   }
 }

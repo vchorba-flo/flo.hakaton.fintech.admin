@@ -4,8 +4,29 @@
       <nb-user onlyPicture [name]="shopName"></nb-user>
       <div>{{shopName}}</div>
     </div>
-    <div>{{userCashBack}}%</div>
-    <div>{{bankCashBack}}%</div>
-    <div>{{shopCashBack}}%</div>
+    <div>
+      <app-arrow-button [isDisable]="!this.bankCashBack" (action)="increment('userCashBack')" evaIconName="arrow-ios-upward-outline"></app-arrow-button>
+      <span>
+        {{userCashBack}}%
+      </span>
+      <app-arrow-button [isDisable]="!this.userCashBack" (action)="decrement('userCashBack')"
+                        evaIconName="arrow-ios-downward-outline"></app-arrow-button>
+    </div>
+    <div>
+      <app-arrow-button [isDisable]="!this.userCashBack" (action)="increment('bankCashBack')" evaIconName="arrow-ios-upward-outline"></app-arrow-button>
+      <span>
+        {{bankCashBack}}%
+      </span>
+      <app-arrow-button [isDisable]="!this.bankCashBack" (action)="decrement('bankCashBack')"
+                        evaIconName="arrow-ios-downward-outline"></app-arrow-button>
+    </div>
+    <div>
+      <app-arrow-button (action)="increment('shopCashBack')" evaIconName="arrow-ios-upward-outline"></app-arrow-button>
+      <span>
+        {{shopCashBack}}%
+      </span>
+      <app-arrow-button [isDisable]="(!this.userCashBack && !this.bankCashBack)" (action)="decrement('shopCashBack')"
+                        evaIconName="arrow-ios-downward-outline"></app-arrow-button>
+    </div>
   </nb-card-body>
 </nb-card>
