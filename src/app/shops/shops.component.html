@@ -7,14 +7,14 @@
 
 <nb-card>
   <nb-card-body class="shop-container">
-    <div>Магазин</div>
-    <div>% клиента</div>
-    <div>% банка</div>
-    <div>% магазина</div>
+    <div (click)="setShopSortField('shopName')">Магазин</div>
+    <div (click)="setShopSortField('user')">% клиента</div>
+    <div (click)="setShopSortField('bank')">% банка</div>
+    <div (click)="setShopSortField('shop')">% магазина</div>
   </nb-card-body>
 </nb-card>
 
-<div *ngFor="let shop of shopsWithCashBack$ | async | filterArrayByValue:shopSearch: 'shopName'; index as i">
+<div *ngFor="let shop of shopsWithCashBack$ | async | filterArrayByValue:shopSearch: 'shopName' | sortShopByCashBack: shopSortField ; index as i">
   <app-shop-card
     [status]="i % 2 ? 'success' : 'primary'"
     [shopName]="shop.shopName"

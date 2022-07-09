@@ -33,8 +33,9 @@ import { SortShopStatisticsPipe } from './shared/pipes/sort-shop-statistics.pipe
 import { CategoryStatisticsComponent } from './shared/components/category-statistics/category-statistics.component';
 import { GeneralStatisticsComponent } from './shared/components/general-statistics/general-statistics.component';
 import { FilterArrayByValuePipe } from './shared/pipes/filter-array-by-value.pipe';
-import {ShopCardComponent} from "./shared/components/shop-card/shop-card.component";
+import { ShopCardComponent } from "./shared/components/shop-card/shop-card.component";
 import { ArrowButtonComponent } from './shared/components/arrow-button/arrow-button.component';
+import { SortShopByCashBackPipe } from './shared/pipes/sort-shop-by-cash-back.pipe';
 import { DatePickerComponent } from './shared/components/date-picker/date-picker.component';
 
 @NgModule({
@@ -52,6 +53,8 @@ import { DatePickerComponent } from './shared/components/date-picker/date-picker
     GeneralStatisticsComponent,
     FilterArrayByValuePipe,
     ShopCardComponent,
+    ArrowButtonComponent,
+    SortShopByCashBackPipe,
     ArrowButtonComponent,
     DatePickerComponent
   ],
