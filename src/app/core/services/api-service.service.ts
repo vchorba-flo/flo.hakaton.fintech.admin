@@ -113,4 +113,8 @@ export class ApiServiceService {
     //     shareReplay(1)
     //   );
   }
+
+  public userBlockAction(user: User): void {
+    user.isBlocked = !user.isBlocked;
+  }
 }

@@ -7,7 +7,10 @@
       <nb-card-body class="user-card">
         <div class="id">{{user.id}}</div>
         <div class="name">{{user.name}}</div>
-        <button class="block-button" nbButton size="small" [status]="user.isBlocked ? 'success' : 'danger'">
+        <button class="block-button"
+                nbButton size="small"
+                (click)="userBlockAction(user)"
+                [status]="user.isBlocked ? 'success' : 'danger'">
           {{user.isBlocked ? 'Разблокировать' : 'Заблокировать'}}
         </button>
       </nb-card-body>

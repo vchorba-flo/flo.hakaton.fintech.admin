@@ -19,4 +19,7 @@ export class UsersComponent implements OnInit {
     this.users$ = this.apiService.getUsers();
   }
 
+  public userBlockAction(user: User): void {
+    this.apiService.userBlockAction(user);
+  }
 }
