@@ -1,0 +1,27 @@
+:host {
+  ::ng-deep {
+    nb-card {
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 22px 70px 4px;
+
+      nb-card-body {
+
+        .body-container {
+          display: flex;
+          align-items: center;
+
+          .category {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+          }
+          .bank-profit,
+          .purchases-number {
+            width: 25%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
