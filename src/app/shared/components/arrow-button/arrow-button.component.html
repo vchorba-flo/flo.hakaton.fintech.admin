@@ -1,0 +1,5 @@
+<button [disabled]="isDisable" [size]="size" nbButton ghost hero [shape]="shape" (click)="onClick()">
+  {{textBeforeIcon}}
+  <nb-icon *ngIf="evaIconName" [icon]="evaIconName"></nb-icon>
+  {{textAfterIcon}}
+</button>
