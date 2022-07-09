@@ -1,0 +1,15 @@
+:host {
+  ::ng-deep {
+    .general-container {
+      display: flex;
+      justify-content: center;
+
+      .general-card {
+        margin: 10px;
+      }
+    }
+    nb-card {
+      max-width: 18rem;
+    }
+  }
+}
