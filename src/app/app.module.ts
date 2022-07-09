@@ -27,6 +27,7 @@ import { CategoryStatisticsComponent } from './shared/components/category-statis
 import { GeneralStatisticsComponent } from './shared/components/general-statistics/general-statistics.component';
 import { FilterArrayByValuePipe } from './shared/pipes/filter-array-by-value.pipe';
 import {ShopCardComponent} from "./shared/components/shop-card/shop-card.component";
+import { ArrowButtonComponent } from './shared/components/arrow-button/arrow-button.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {ShopCardComponent} from "./shared/components/shop-card/shop-card.compone
     CategoryStatisticsComponent,
     GeneralStatisticsComponent,
     FilterArrayByValuePipe,
-    ShopCardComponent
+    ShopCardComponent,
+    ArrowButtonComponent
   ],
   imports: [
     BrowserModule,

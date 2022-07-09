@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from "rxjs";
+import {ApiServiceService, ShopsWithCashBack} from "../core/services/api-service.service";
 
 @Component({
   selector: 'app-shops',
@@ -6,17 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shops.component.scss']
 })
 export class ShopsComponent implements OnInit {
-  mockShops = [
-    {shopName: 'Магнит', cashBack: {shop:8, bank:5, user:3 } },
-    {shopName: 'Перекресток', cashBack: {shop:4, bank:2, user:2 } },
-    {shopName: 'Пятюна', cashBack: {shop:5, bank:2, user:3 } },
-    {shopName: 'Ведьмачье дело', cashBack: {shop:10, bank:3, user:7 } },
-    {shopName: 'Барбер шоп', cashBack: {shop:3, bank:2, user:1 } },
-  ]
 
-  constructor() { }
+  shopsWithCashBack$: Observable<ShopsWithCashBack[]>
 
-  ngOnInit(): void {
+  constructor(private apiService: ApiServiceService) {
   }
 
+  ngOnInit(): void {
+    this.shopsWithCashBack$ = this.apiService.getShopsWithCashBack()
+  }
 }

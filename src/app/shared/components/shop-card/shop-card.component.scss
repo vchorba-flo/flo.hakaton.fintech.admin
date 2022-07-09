@@ -14,5 +14,14 @@ nb-card {
   & div {
     text-align: center;
     width: 25%;
+    & span {
+      padding: 0 5px;
+    }
+  }
+}
+
+.inc-dec {
+  & button:nth-last-child {
+    padding-right: 15px;
   }
 }

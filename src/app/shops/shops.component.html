@@ -14,7 +14,7 @@
   </nb-card-body>
 </nb-card>
 
-<div *ngFor="let shop of mockShops; index as i">
+<div *ngFor="let shop of shopsWithCashBack$ | async; index as i">
   <app-shop-card
     [status]="i % 2 ? 'success' : 'primary'"
     [shopName]="shop.shopName"
