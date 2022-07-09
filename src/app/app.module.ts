@@ -12,7 +12,7 @@ import {
   NbSidebarModule,
   NbMenuModule,
   NbCardModule,
-  NbUserModule, NbInputModule, NbButtonModule, NbTabsetModule,
+  NbUserModule, NbInputModule, NbButtonModule, NbTabsetModule, NbFormFieldModule, NbIconModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SideMenuComponent } from './side-menu/side-menu.component';
@@ -26,6 +26,7 @@ import { SortShopStatisticsPipe } from './shared/pipes/sort-shop-statistics.pipe
 import { CategoryStatisticsComponent } from './shared/components/category-statistics/category-statistics.component';
 import { GeneralStatisticsComponent } from './shared/components/general-statistics/general-statistics.component';
 import { FilterArrayByValuePipe } from './shared/pipes/filter-array-by-value.pipe';
+import {ShopCardComponent} from "./shared/components/shop-card/shop-card.component";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { FilterArrayByValuePipe } from './shared/pipes/filter-array-by-value.pip
     SortShopStatisticsPipe,
     CategoryStatisticsComponent,
     GeneralStatisticsComponent,
-    FilterArrayByValuePipe
+    FilterArrayByValuePipe,
+    ShopCardComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +61,8 @@ import { FilterArrayByValuePipe } from './shared/pipes/filter-array-by-value.pip
     ReactiveFormsModule,
     NbTabsetModule,
     HttpClientModule,
+    NbFormFieldModule,
+    NbIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
