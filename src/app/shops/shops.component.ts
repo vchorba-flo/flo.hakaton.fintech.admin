@@ -10,6 +10,7 @@ import {ApiServiceService, ShopsWithCashBack} from "../core/services/api-service
 export class ShopsComponent implements OnInit {
 
   shopsWithCashBack$: Observable<ShopsWithCashBack[]>
+  shopSearch: string;
 
   constructor(private apiService: ApiServiceService) {
   }
