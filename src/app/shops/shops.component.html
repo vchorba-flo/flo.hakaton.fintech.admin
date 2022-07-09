@@ -1,1 +1,25 @@
-<p>shops works!</p>
+<nb-card class="search-container">
+      <nb-form-field>
+        <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+        <input type="search" [fullWidth]="true" nbInput>
+      </nb-form-field>
+</nb-card>
+
+<nb-card>
+  <nb-card-body class="shop-container">
+    <div>Магазин</div>
+    <div>% клиента</div>
+    <div>% банка</div>
+    <div>% магазина</div>
+  </nb-card-body>
+</nb-card>
+
+<div *ngFor="let shop of mockShops; index as i">
+  <app-shop-card
+    [status]="i % 2 ? 'success' : 'primary'"
+    [shopName]="shop.shopName"
+    [bankCashBack]="shop.cashBack.bank"
+    [userCashBack]="shop.cashBack.user"
+    [shopCashBack]="shop.cashBack.shop"
+  ></app-shop-card>
+</div>

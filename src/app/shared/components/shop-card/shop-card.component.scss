@@ -1,0 +1,18 @@
+nb-card {
+  border-radius: 15px;
+}
+
+.shop-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  & .shop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  & div {
+    text-align: center;
+    width: 25%;
+  }
+}
