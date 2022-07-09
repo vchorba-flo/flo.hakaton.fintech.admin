@@ -25,3 +25,9 @@ nb-card {
     padding-right: 15px;
   }
 }
+
+nb-card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
