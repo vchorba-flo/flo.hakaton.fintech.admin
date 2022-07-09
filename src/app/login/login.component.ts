@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NbComponentOrCustomStatus } from '@nebular/theme';
+import { LoginSubjectService } from '../core/services/login-subject.service';
 
 @Component({
   selector: 'app-login',
@@ -17,9 +18,10 @@ export class LoginComponent implements OnInit {
 
   public inputStatus: NbComponentOrCustomStatus = 'basic';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private loginSubject: LoginSubjectService) { }
 
   ngOnInit(): void {
+    this.loginSubject.logout();
     this.form.valueChanges.subscribe(() => {
       this.inputStatus = 'basic'
     })
@@ -27,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   public login(): void {
     if (this.form.value.login === 'admin' && this.form.value.password === 'admin') {
-      this.router.navigate(['statistics']);
+      this.loginSubject.login()
       return
     }
     this.inputStatus = 'danger'

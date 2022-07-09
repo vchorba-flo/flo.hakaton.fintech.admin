@@ -4,7 +4,7 @@
 <!--  &lt;!&ndash; Insert header here &ndash;&gt;-->
 <!--  </nb-layout-header>-->
 
-  <nb-sidebar>
+  <nb-sidebar [state]="isLoggedAdmin ? 'expanded' : 'collapsed'">
     <app-admin-card
       [title]="'Administrator'"
       [name]="'Admin'"></app-admin-card>
